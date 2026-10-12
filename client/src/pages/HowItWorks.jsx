@@ -1,0 +1,10 @@
+const steps = [
+  ['01', 'Connect', 'PeerShare uses a small signaling service only to help two browsers find each other and exchange connection details.'],
+  ['02', 'Find the best path', 'WebRTC uses STUN to establish the most direct route between devices, even when they are on different networks.'],
+  ['03', 'Open a secure channel', 'Once connected, messages, calls, and file data travel through encrypted peer-to-peer channels.'],
+  ['04', 'Share smoothly', 'Large files move in controlled chunks so the browser stays responsive from start to finish.']
+]
+
+export default function HowItWorks() {
+  return <section className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-16"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr]"><header className="lg:sticky lg:top-24 lg:self-start"><p className="text-xs font-bold uppercase tracking-[.2em] text-indigo-600 dark:text-indigo-400">How it works</p><h1 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl dark:text-white">Connection without the detour.</h1><p className="mt-5 max-w-md text-base leading-7 text-slate-600 dark:text-slate-400">The service coordinates a direct route between you and the people you trust. Your content does not need to pass through a central transfer server.</p><div className="mt-8 flex items-center gap-3 rounded-2xl border border-indigo-500/20 bg-indigo-500/5 p-4 text-sm font-medium text-slate-700 dark:text-slate-300"><span className="grid h-9 w-9 place-items-center rounded-xl bg-indigo-600 text-white">⌁</span><span>Direct, encrypted browser connections</span></div></header><div className="space-y-4">{steps.map(([number, title, text]) => <article key={number} className="surface-card group flex gap-5 p-5 sm:p-7"><span className="font-display text-3xl font-bold text-indigo-200 transition group-hover:text-indigo-500 dark:text-indigo-950 dark:group-hover:text-indigo-400">{number}</span><div><h2 className="text-lg font-bold text-slate-950 dark:text-white">{title}</h2><p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">{text}</p></div></article>)}</div></div></section>
+}
